@@ -33,7 +33,7 @@ export default function HeroSection({ heroMedia, onMediaChange, isAdmin }) {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-5xl lg:text-6xl font-semibold text-sky-600 leading-tight tracking-tight"
           >
-            Clean, Clear Water Around Your Dock
+            Water Access Made Easy
           </motion.h1>
           
           <motion.p 
