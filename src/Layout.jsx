@@ -100,8 +100,9 @@ function LogoUploader({ isScrolled }) {
       <img 
         src={logoMedia} 
         alt="West Aquatic Services" 
-        className="h-10 w-auto max-w-[120px] object-contain cursor-pointer"
+        className="h-10 w-auto max-w-[120px] object-contain"
         onClick={() => isAdmin && fileInputRef.current?.click()}
+        style={{ cursor: isAdmin ? 'pointer' : 'default' }}
       />
       {isAdmin && isHovered && (
         <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center">
@@ -179,12 +180,12 @@ export default function Layout({ children }) {
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to={createPageUrl('Home')} className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <LogoUploader isScrolled={isScrolled} />
               <span className={`text-lg font-semibold transition-colors ${isScrolled ? 'text-slate-800' : 'text-slate-800'}`}>
                 West Aquatic Services
               </span>
-            </Link>
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
