@@ -42,24 +42,6 @@ export default function RequestQuote() {
 
     await base44.entities.QuoteRequest.create(formData);
 
-    await base44.integrations.Core.SendEmail({
-      to: 'Henry.West@du.edu',
-      subject: `New Quote Request from ${formData.full_name}`,
-      body: `
-New quote request received:
-
-Name: ${formData.full_name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Property Address: ${formData.property_address}
-Area Type: ${formData.area_type || 'Not specified'}
-Estimated Sq Ft: ${formData.estimated_sqft || 'Not specified'}
-
-Additional Details:
-${formData.additional_details || 'None provided'}
-      `
-    });
-
     setIsSubmitting(false);
     setIsSuccess(true);
   };
