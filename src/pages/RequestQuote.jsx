@@ -110,7 +110,7 @@ ${formData.additional_details || 'None provided'}
               Request Your Quote
             </h1>
             <p className="mt-4 text-lg text-slate-600">
-              Share a few details and we'll respond quickly with a clear estimate.
+              We tend to respond within 24 hours.
             </p>
           </motion.div>
         </div>
