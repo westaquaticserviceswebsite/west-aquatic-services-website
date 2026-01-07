@@ -47,7 +47,7 @@ export default function Contact() {
             </div>
 
             {/* Email Button */}
-            <div className="pt-4 space-y-8">
+            <div className="pt-4 space-y-12">
               <a href="mailto:Henry.West@du.edu">
                 <Button 
                   className="w-full h-16 bg-sky-600 hover:bg-sky-700 text-white text-lg rounded-full shadow-lg shadow-sky-200 transition-all flex items-center justify-center gap-3"
