@@ -79,7 +79,7 @@ ${formData.message}
               Message Sent!
             </h1>
             <p className="mt-4 text-slate-600">
-              Thank you for reaching out. We'll get back to you as soon as possible.
+              Thank you for reaching out. We will get back to you as soon as possible.
             </p>
           </motion.div>
         </div>
@@ -148,7 +148,7 @@ ${formData.message}
 
             <div className="p-6 rounded-2xl bg-white shadow-sm border border-slate-100">
               <p className="text-slate-600 leading-relaxed">
-                Whether you have questions about our process, need a custom solution, or just want to learn more—we're here to help.
+                Whether you have questions about our process, need a custom solution, or just want to learn more we are here to help.
               </p>
             </div>
           </motion.div>

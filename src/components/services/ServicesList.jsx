@@ -7,7 +7,7 @@ export default function ServicesList() {
     {
       icon: Hand,
       title: 'Manual Hydrilla Removal',
-      description: 'Using hand-operated tools for precise, careful vegetation removal'
+      description: 'Using hand operated tools for precise, careful vegetation removal'
     },
     {
       icon: Anchor,
@@ -22,12 +22,12 @@ export default function ServicesList() {
     {
       icon: Droplets,
       title: 'No Chemicals or Herbicides',
-      description: 'Completely natural approach—safe for lake ecosystem and wildlife'
+      description: 'Completely natural approach safe for lake ecosystem and wildlife'
     },
     {
       icon: Volume2,
       title: 'No Motorized Equipment',
-      description: 'Quiet, non-disruptive work that respects your peace'
+      description: 'Quiet, nondisruptive work that respects your peace'
     },
     {
       icon: Package,
@@ -42,7 +42,7 @@ export default function ServicesList() {
     {
       icon: Calculator,
       title: 'Fair Pricing',
-      description: 'Pricing based on square footage removed—clear and transparent'
+      description: 'Pricing based on square footage removed clear and transparent'
     }
   ];
 

@@ -12,15 +12,8 @@ export default function VideoSection({ videoMedia, caption, onMediaChange, isAdm
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10"
+          className="mb-10"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 text-sky-700 text-sm font-medium mb-4">
-            <Play className="w-4 h-4" />
-            See Our Process
-          </div>
-          <h2 className="text-2xl md:text-4xl font-semibold text-slate-800">
-            Watch How We Work
-          </h2>
         </motion.div>
 
         <motion.div

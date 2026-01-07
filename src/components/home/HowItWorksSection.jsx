@@ -8,13 +8,13 @@ export default function HowItWorksSection({ stepMedia, onMediaChange, isAdmin })
       id: 'step-1',
       number: '01',
       title: 'Request a Quote',
-      description: 'Share your property details and we\'ll respond with a clear, fair estimate.'
+      description: 'Share your property details and we will respond with a clear, fair estimate.'
     },
     {
       id: 'step-2',
       number: '02',
       title: 'We Assess & Schedule',
-      description: 'We\'ll visit your property, confirm the scope, and set a convenient date.'
+      description: 'We will visit your property, confirm the scope, and set a convenient date.'
     },
     {
       id: 'step-3',
@@ -66,18 +66,6 @@ export default function HowItWorksSection({ stepMedia, onMediaChange, isAdmin })
                 <p className="mt-3 text-slate-600">
                   {step.description}
                 </p>
-
-                {isAdmin && (
-                  <div className="mt-6">
-                    <MediaUploader
-                      sectionId={step.id}
-                      currentMedia={stepMedia?.[step.id]}
-                      onMediaChange={(url) => onMediaChange?.(step.id, url)}
-                      isAdmin={isAdmin}
-                      aspectRatio="square"
-                    />
-                  </div>
-                )}
               </div>
 
               {/* Connector line for desktop */}

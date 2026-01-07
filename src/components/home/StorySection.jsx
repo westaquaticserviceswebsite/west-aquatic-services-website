@@ -34,7 +34,7 @@ export default function StorySection({ storyMedia, onMediaChange, isAdmin }) {
               Our Approach
             </div>
             <p className="text-xl md:text-2xl text-slate-700 leading-relaxed">
-              We carefully remove hydrilla by hand—directly from docks and shorelines—improving access without damaging your property or the lake ecosystem.
+              We carefully remove hydrilla by hand directly from docks and shorelines improving access without damaging your property or the lake ecosystem.
             </p>
             <div className="pt-4 border-t border-slate-100">
               <p className="text-slate-500 text-sm">

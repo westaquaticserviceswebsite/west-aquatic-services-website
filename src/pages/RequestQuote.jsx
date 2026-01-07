@@ -87,7 +87,7 @@ ${formData.additional_details || 'None provided'}
               Quote Request Received!
             </h1>
             <p className="mt-4 text-slate-600">
-              Thank you for reaching out. We'll review your request and get back to you within 24 hours with a clear estimate.
+              Thank you for reaching out. We will review your request and get back to you within 24 hours with a clear estimate.
             </p>
           </motion.div>
         </div>

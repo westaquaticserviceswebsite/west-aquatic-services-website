@@ -17,7 +17,7 @@ export default function WhyItWorksSection() {
           </h2>
           
           <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            Hydrilla blocks docks, ruins views, and limits time on the water. Our manual approach avoids heavy equipment, chemicals, and shoreline disruption—while delivering clean, usable results.
+            Hydrilla blocks docks, ruins views, and limits time on the water. Our manual approach avoids heavy equipment, chemicals, and shoreline disruption while delivering clean, usable results.
           </p>
         </motion.div>
 

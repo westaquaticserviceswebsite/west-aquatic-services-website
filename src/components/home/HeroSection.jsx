@@ -23,19 +23,7 @@ export default function HeroSection({ heroMedia, onMediaChange, isAdmin }) {
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/40" />
       </div>
 
-      {/* Admin upload overlay */}
-      {isAdmin && (
-        <div className="absolute top-4 right-4 z-20">
-          <MediaUploader
-            sectionId="hero"
-            currentMedia={heroMedia}
-            onMediaChange={onMediaChange}
-            isAdmin={isAdmin}
-            className="w-48"
-            aspectRatio="video"
-          />
-        </div>
-      )}
+
 
       <div className="relative z-10 w-full px-5 md:px-8 py-12 md:py-20">
         <div className="max-w-3xl mx-auto text-center">
@@ -45,8 +33,7 @@ export default function HeroSection({ heroMedia, onMediaChange, isAdmin }) {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-5xl lg:text-6xl font-semibold text-slate-800 leading-tight tracking-tight"
           >
-            Clean, Clear Water Around Your Dock—
-            <span className="text-sky-600"> Without Machines or Chemicals</span>
+            Clean, Clear Water Around Your Dock
           </motion.h1>
           
           <motion.p 

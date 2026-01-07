@@ -60,7 +60,7 @@ export default function Services() {
               Our Services
             </h1>
             <p className="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              Focused manual hydrilla removal with care for your property and the lake. No chemicals, no heavy machinery—just careful, professional work.
+              Focused manual hydrilla removal with care for your property and the lake. No chemicals, no heavy machinery just careful, professional work.
             </p>
           </motion.div>
         </div>

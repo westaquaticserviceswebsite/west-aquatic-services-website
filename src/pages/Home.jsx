@@ -4,7 +4,6 @@ import { useQuery } from '@tanstack/react-query';
 import HeroSection from '@/components/home/HeroSection';
 import StorySection from '@/components/home/StorySection';
 import WhyItWorksSection from '@/components/home/WhyItWorksSection';
-import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import HowItWorksSection from '@/components/home/HowItWorksSection';
 import FinalCTASection from '@/components/home/FinalCTASection';
 import Footer from '@/components/Footer';
@@ -59,12 +58,6 @@ export default function Home() {
       />
       
       <WhyItWorksSection />
-      
-      <WhyChooseUsSection 
-        cardMedia={mediaState}
-        onMediaChange={handleMediaChange}
-        isAdmin={isAdmin}
-      />
       
       <HowItWorksSection 
         stepMedia={mediaState}
