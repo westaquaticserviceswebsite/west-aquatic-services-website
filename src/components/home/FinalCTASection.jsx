@@ -22,8 +22,12 @@ export default function FinalCTASection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-semibold text-white leading-tight">
-            Feel Confident About Your Water Again
+            Feel Good About Your Water Again
           </h2>
+          
+          <p className="mt-6 text-lg text-white/90 max-w-xl mx-auto">
+            Reclaim your dock, your view, and your peace of mind with professional, eco-friendly hydrilla removal.
+          </p>
           
           <div className="mt-10">
             <Link to={createPageUrl('RequestQuote')}>

@@ -99,10 +99,10 @@ ${formData.message}
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-3xl md:text-5xl font-semibold text-slate-800">
-              Contact Us
+              Contact West Aquatic Services
             </h1>
             <p className="mt-4 text-lg text-slate-600">
-              Have questions or special requests? We are happy to help.
+              Questions or special requests? We're happy to help.
             </p>
           </motion.div>
         </div>
@@ -147,8 +147,8 @@ ${formData.message}
             </div>
 
             <div className="p-6 rounded-2xl bg-white shadow-sm border border-slate-100">
-              <p className="text-sm text-slate-500 italic">
-                Serving Lake Austin and surrounding waterways
+              <p className="text-slate-600 leading-relaxed">
+                Whether you have questions about our process, need a custom solution, or just want to learn more—we're here to help.
               </p>
             </div>
           </motion.div>

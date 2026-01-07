@@ -1,58 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { base44 } from '@/api/base44Client';
-import { Waves, Menu, X, Upload } from 'lucide-react';
+import { Waves, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useQuery } from '@tanstack/react-query';
 
 export default function Layout({ children }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [uploadingLogo, setUploadingLogo] = useState(false);
-  const fileInputRef = useRef(null);
   const location = useLocation();
-
-  useEffect(() => {
-    const checkAdmin = async () => {
-      try {
-        const user = await base44.auth.me();
-        setIsAdmin(user?.role === 'admin');
-      } catch {
-        setIsAdmin(false);
-      }
-    };
-    checkAdmin();
-  }, []);
-
-  const { data: logos = [] } = useQuery({
-    queryKey: ['siteLogo'],
-    queryFn: () => base44.entities.SiteLogo.list()
-  });
-
-  const activeLogo = logos.find(l => l.is_active);
-
-  const handleLogoUpload = async (e) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    setUploadingLogo(true);
-    try {
-      const { file_url } = await base44.integrations.Core.UploadFile({ file });
-      
-      if (activeLogo) {
-        await base44.entities.SiteLogo.update(activeLogo.id, { logo_url: file_url });
-      } else {
-        await base44.entities.SiteLogo.create({ logo_url: file_url, is_active: true });
-      }
-    } catch (error) {
-      console.error('Logo upload failed:', error);
-    } finally {
-      setUploadingLogo(false);
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,42 +73,14 @@ export default function Layout({ children }) {
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to={createPageUrl('Home')} className="flex items-center gap-3 group relative">
-              {activeLogo?.logo_url ? (
-                <img 
-                  src={activeLogo.logo_url} 
-                  alt="West Aquatic Services" 
-                  className="h-10 md:h-12 w-auto object-contain"
-                />
-              ) : (
-                <div className={`p-2 rounded-xl transition-colors ${isScrolled ? 'bg-sky-100' : 'bg-sky-50'}`}>
-                  <Waves className="w-5 h-5 text-sky-600" />
-                </div>
-              )}
-              <span className={`text-base md:text-lg font-semibold transition-colors ${isScrolled ? 'text-slate-800' : 'text-slate-800'}`}>
-                West Aquatic Services
+            <Link to={createPageUrl('Home')} className="flex items-center gap-3">
+              <div className={`p-2 rounded-xl transition-colors ${isScrolled ? 'bg-sky-100' : 'bg-white/90'}`}>
+                <Waves className="w-5 h-5 text-sky-600" />
+              </div>
+              <span className={`text-lg font-semibold transition-colors ${isScrolled ? 'text-slate-800' : 'text-slate-800'}`}>
+                West Aquatic
               </span>
-              
-              {isAdmin && (
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    fileInputRef.current?.click();
-                  }}
-                  className="absolute -right-2 -top-2 p-1.5 rounded-full bg-sky-600 text-white opacity-0 group-hover:opacity-100 transition-opacity shadow-lg"
-                >
-                  <Upload className="w-3 h-3" />
-                </button>
-              )}
             </Link>
-            
-            <input
-              ref={fileInputRef}
-              type="file"
-              accept="image/*"
-              onChange={handleLogoUpload}
-              className="hidden"
-            />
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
