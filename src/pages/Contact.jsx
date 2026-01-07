@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail } from 'lucide-react';
+import { MapPin, Mail, Phone } from 'lucide-react';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 
@@ -47,7 +47,7 @@ export default function Contact() {
             </div>
 
             {/* Email Button */}
-            <div className="pt-4 space-y-4">
+            <div className="pt-4 space-y-6">
               <a href="mailto:Henry.West@du.edu">
                 <Button 
                   className="w-full h-16 bg-sky-600 hover:bg-sky-700 text-white text-lg rounded-full shadow-lg shadow-sky-200 transition-all flex items-center justify-center gap-3"
@@ -56,11 +56,11 @@ export default function Contact() {
                   Email Us
                 </Button>
               </a>
-              <a href="tel:+1234567890">
+              <a href="tel:+17372319001">
                 <Button 
                   className="w-full h-16 bg-emerald-600 hover:bg-emerald-700 text-white text-lg rounded-full shadow-lg shadow-emerald-200 transition-all flex items-center justify-center gap-3"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                   Call Us
                 </Button>
               </a>
