@@ -17,11 +17,8 @@ export default function RequestQuote() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-3xl md:text-5xl font-semibold text-slate-800">
-              Request Your Quote
+              Clear Your Lake Access Fast
             </h1>
-            <p className="mt-4 text-lg text-slate-600">
-              We tend to respond within 24 hours.
-            </p>
           </motion.div>
         </div>
       </section>
@@ -36,7 +33,7 @@ export default function RequestQuote() {
         >
           <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-10">
             <p className="text-slate-600 mb-8">
-              Click below to fill out our quote request form and we'll get back to you within 24 hours.
+              Fill out the form below and we will send your custom quote within 24 hours. Safe fast and hassle free.
             </p>
             <a 
               href="https://www.surveymonkey.com/r/FPMJF9H" 
