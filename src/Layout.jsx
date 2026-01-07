@@ -100,7 +100,7 @@ function LogoUploader({ isScrolled }) {
       <img 
         src={logoMedia} 
         alt="West Aquatic Services" 
-        className="h-10 w-10 object-contain rounded-lg cursor-pointer"
+        className="h-10 w-auto max-w-[120px] object-contain cursor-pointer"
         onClick={() => isAdmin && fileInputRef.current?.click()}
       />
       {isAdmin && isHovered && (
