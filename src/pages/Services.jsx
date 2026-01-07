@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import VideoSection from '@/components/services/VideoSection';
 import ServicesList from '@/components/services/ServicesList';
-import ImageGallery from '@/components/services/ImageGallery';
 import Footer from '@/components/Footer';
 
 export default function Services() {
@@ -73,12 +72,6 @@ export default function Services() {
       />
 
       <ServicesList />
-
-      <ImageGallery 
-        galleryMedia={mediaState}
-        onMediaChange={handleMediaChange}
-        isAdmin={isAdmin}
-      />
 
       {/* CTA Section */}
       <section className="py-16 md:py-20 px-5 md:px-8 bg-white">
