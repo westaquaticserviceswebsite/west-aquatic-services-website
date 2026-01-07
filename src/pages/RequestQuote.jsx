@@ -43,7 +43,7 @@ export default function RequestQuote() {
     await base44.entities.QuoteRequest.create(formData);
 
     await base44.integrations.Core.SendEmail({
-      to: 'Henry.West@du.edu',
+      to: 'westaquaticservices@gmail.com',
       subject: `New Quote Request from ${formData.full_name}`,
       body: `
 New quote request received:

@@ -38,7 +38,7 @@ export default function Contact() {
     await base44.entities.ContactMessage.create(formData);
 
     await base44.integrations.Core.SendEmail({
-      to: 'Henry.West@du.edu',
+      to: 'westaquaticservices@gmail.com',
       subject: `New Contact Message from ${formData.full_name}`,
       body: `
 New contact message received:
