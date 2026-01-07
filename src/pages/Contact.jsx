@@ -146,11 +146,7 @@ ${formData.message}
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white shadow-sm border border-slate-100">
-              <p className="text-slate-600 leading-relaxed">
-                Whether you have questions about our process, need a custom solution, or just want to learn more we are here to help.
-              </p>
-            </div>
+
           </motion.div>
 
           {/* Form */}
