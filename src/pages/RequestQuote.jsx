@@ -110,7 +110,7 @@ ${formData.additional_details || 'None provided'}
               Request Your Quote
             </h1>
             <p className="mt-4 text-lg text-slate-600">
-              Share a few details and we'll respond quickly with a clear estimate.
+              Share a few details and we will follow up with a clear, honest estimate.
             </p>
           </motion.div>
         </div>

@@ -24,7 +24,7 @@ export default function Footer() {
               <span className="text-xl font-semibold">West Aquatic Services</span>
             </div>
             <p className="mt-4 text-slate-400 leading-relaxed">
-              Manual hydrilla removal focused on clarity, care, and value. Serving Lake Austin homeowners with precision and environmental responsibility.
+              Manual hydrilla removal focused on care, clarity, and value.
             </p>
           </div>
 
