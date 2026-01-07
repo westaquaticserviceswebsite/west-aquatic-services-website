@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function StorySection({ storyMedia, onMediaChange, isAdmin }) {
   return (
-    <section className="py-16 md:py-24 px-5 md:px-8 bg-white">
+    <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-5 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <motion.div
