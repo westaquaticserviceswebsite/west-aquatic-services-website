@@ -82,7 +82,7 @@ export default function HeroSection({ heroMedia, onMediaChange, isAdmin }) {
               { icon: Leaf, text: 'Environmentally Responsible' },
               { icon: Hand, text: 'Manual Precision Removal' }
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-2 text-slate-600">
+              <div key={i} className="flex items-center gap-1.5 text-slate-600">
                 <div className="p-2 rounded-full bg-emerald-50">
                   <item.icon className="w-5 h-5 text-emerald-600" />
                 </div>
