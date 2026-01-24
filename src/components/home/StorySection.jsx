@@ -16,11 +16,12 @@ export default function StorySection() {
             Our Approach
           </div>
           <p className="text-2xl md:text-3xl text-slate-700 leading-relaxed">
-            We remove hydrilla by hand. No shortcuts. No chemicals. Just results.
+            This is not spraying or cutting corners.<br />
+            We remove hydrilla by hand with precision, protecting your dock, your property, and the lake itself.
           </p>
           <div className="pt-6">
             <p className="text-slate-500">
-              Serving Lake Austin homeowners with care and precision
+              Proudly serving Lake Austin homeowners.
             </p>
           </div>
         </motion.div>
