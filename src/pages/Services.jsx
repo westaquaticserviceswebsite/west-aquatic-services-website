@@ -30,7 +30,7 @@ export default function Services() {
         </div>
       </section>
 
-      <VideoSection videoMedia="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200" />
+      <VideoSection videoMedia="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1200" />
 
       <ServicesList />
 
