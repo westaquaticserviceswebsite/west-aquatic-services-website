@@ -12,7 +12,25 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="pt-20"></div>
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 md:pt-32 md:pb-20 px-5 md:px-8 bg-gradient-to-br from-sky-50 via-white to-emerald-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-3xl md:text-5xl font-semibold text-slate-800 leading-tight">
+              Our Services
+            </h1>
+            <p className="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              Focused manual hydrilla removal with care for your property and the lake. No chemicals, no heavy machinery just careful, professional work.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+
 
       <ServicesList />
 
