@@ -19,11 +19,11 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-semibold text-sky-600 leading-tight tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-600 leading-tight tracking-tight"
           >
-            Reclaim Your Waterfront in Days, Not Weeks
+            Your Dock. Cleared in Days.
           </motion.h1>
-          
+
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
