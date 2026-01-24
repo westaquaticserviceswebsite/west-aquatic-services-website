@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import MediaUploader from '@/components/ui/MediaUploader';
 
-export default function HowItWorksSection({ stepMedia, onMediaChange, isAdmin }) {
+export default function HowItWorksSection() {
   const steps = [
     {
       id: 'step-1',
