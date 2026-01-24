@@ -17,7 +17,7 @@ export default function RequestQuote() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-3xl md:text-5xl font-semibold text-slate-800">
-              Clear Your Lake Access Fast
+              Your Quote. 24 Hours. Zero Hassle.
             </h1>
           </motion.div>
         </div>
@@ -32,8 +32,8 @@ export default function RequestQuote() {
           className="max-w-2xl mx-auto text-center"
         >
           <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-10">
-            <p className="text-slate-600 mb-8">
-              Fill out the form below and we will send your custom quote within 24 hours. Safe fast and hassle free.
+            <p className="text-slate-600 mb-8 text-lg">
+              Tell us about your property. We'll send a clear, honest quote within 24 hours. No surprises, no pressure.
             </p>
             <a 
               href="https://www.surveymonkey.com/r/FPMJF9H" 
@@ -43,7 +43,7 @@ export default function RequestQuote() {
               <Button 
                 className="h-16 bg-sky-600 hover:bg-sky-700 text-white text-lg rounded-full shadow-lg shadow-sky-200 transition-all px-10 flex items-center justify-center gap-3 mx-auto"
               >
-                Get My Quote
+                Get My Free Quote
                 <ExternalLink className="w-5 h-5" />
               </Button>
             </a>

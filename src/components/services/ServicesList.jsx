@@ -7,42 +7,42 @@ export default function ServicesList() {
     {
       icon: Hand,
       title: 'Manual Hydrilla Removal',
-      description: 'Using hand operated tools for precise, careful vegetation removal'
+      description: 'Every strand removed by hand—precise, thorough, and effective'
     },
     {
       icon: Anchor,
       title: 'Dock & Shoreline Clearing',
-      description: 'Restore full access to your dock, boat lifts, and waterfront areas'
+      description: 'Full access restored to your dock, boat lift, and waterfront'
     },
     {
       icon: Fish,
       title: 'Swim Area Restoration',
-      description: 'Create safe, clear swimming zones around your property'
+      description: 'Safe, clear water where your family can swim with confidence'
     },
     {
       icon: Droplets,
-      title: 'No Chemicals or Herbicides',
-      description: 'Completely natural approach safe for lake ecosystem and wildlife'
+      title: 'Zero Chemicals',
+      description: 'Completely natural—safe for the lake, wildlife, and your family'
     },
     {
       icon: Volume2,
-      title: 'No Motorized Equipment',
-      description: 'Quiet, nondisruptive work that respects your peace'
+      title: 'No Heavy Machinery',
+      description: 'Quiet, careful work that won't disturb your property or peace'
     },
     {
       icon: Package,
-      title: 'Proper Disposal',
-      description: 'Vegetation is collected, dried, bagged, and properly disposed'
+      title: 'Complete Cleanup',
+      description: 'We collect, bag, and dispose of everything—nothing left behind'
     },
     {
       icon: FileCheck,
-      title: 'Permit Compliant',
-      description: 'All work meets local and environmental regulations'
+      title: 'Fully Permitted',
+      description: 'Every job meets local regulations and environmental standards'
     },
     {
       icon: Calculator,
-      title: 'Fair Pricing',
-      description: 'Pricing based on square footage removed clear and transparent'
+      title: 'Transparent Pricing',
+      description: 'Simple square-footage pricing—no hidden fees, no surprises'
     }
   ];
 

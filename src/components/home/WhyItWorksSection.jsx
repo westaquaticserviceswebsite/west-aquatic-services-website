@@ -13,11 +13,11 @@ export default function WhyItWorksSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-4xl font-semibold text-slate-800 leading-tight">
-            A Smarter, More Responsible Way to Remove Hydrilla
+            What You Get Back
           </h2>
           
           <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            Hydrilla blocks docks, ruins views, and limits time on the water. Our manual approach avoids heavy equipment, chemicals, and shoreline disruption while delivering clean, usable results.
+            Hydrilla steals your dock access, blocks your view, and costs you days on the water. We give it all back—without chemicals, noise, or damage.
           </p>
         </motion.div>
 

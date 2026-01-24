@@ -21,7 +21,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl lg:text-6xl font-semibold text-sky-600 leading-tight tracking-tight"
           >
-            Clear Water Access for Every Dock
+            Reclaim Your Waterfront in Days, Not Weeks
           </motion.h1>
           
           <motion.p 
@@ -30,7 +30,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-8 text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl mx-auto"
           >
-            Manual hydrilla removal designed to restore access, protect the lake, and keep your shoreline beautiful.
+            Safe, manual hydrilla removal that restores dock access without chemicals or heavy machinery
           </motion.p>
 
           <motion.div 

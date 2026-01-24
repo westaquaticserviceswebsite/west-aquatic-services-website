@@ -19,7 +19,7 @@ export default function Services() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-3xl md:text-5xl font-semibold text-slate-800 leading-tight">
-              Our Services
+              What We Do
             </h1>
           </motion.div>
         </div>
@@ -37,10 +37,10 @@ export default function Services() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl md:text-3xl font-semibold text-slate-800">
-              Ready to Clear Your Waterfront?
+              Ready to Take Back Your Waterfront?
             </h2>
-            <p className="mt-4 text-slate-600">
-              Get a free quote and see what we can do for your property.
+            <p className="mt-4 text-slate-600 text-lg">
+              Get your free quote today. See your property transformed tomorrow.
             </p>
             <div className="mt-8">
               <Link to={createPageUrl('RequestQuote')}>

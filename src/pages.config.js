@@ -1,14 +1,14 @@
-import RequestQuote from './pages/RequestQuote';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import RequestQuote from './pages/RequestQuote';
 import Services from './pages/Services';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
-    "RequestQuote": RequestQuote,
     "Contact": Contact,
     "Home": Home,
+    "RequestQuote": RequestQuote,
     "Services": Services,
 }
 

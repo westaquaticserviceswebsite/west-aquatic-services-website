@@ -16,10 +16,10 @@ export default function Contact() {
             className="text-center mb-20"
           >
             <h1 className="text-4xl md:text-6xl font-semibold text-slate-900 mb-6">
-              Get In Touch
+              Let's Talk About Your Lake
             </h1>
             <p className="text-xl text-slate-600">
-              We'd love to hear from you
+              Questions? Ready to start? We're here to help.
             </p>
           </motion.div>
 

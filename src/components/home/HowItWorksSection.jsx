@@ -7,20 +7,20 @@ export default function HowItWorksSection({ stepMedia, onMediaChange, isAdmin })
     {
       id: 'step-1',
       number: '01',
-      title: 'Request a Quote',
-      description: 'Share your property details and we will respond with a clear, fair estimate.'
+      title: 'Get Your Quote',
+      description: 'Tell us about your property. Get a transparent quote in 24 hours.'
     },
     {
       id: 'step-2',
       number: '02',
-      title: 'We Assess & Schedule',
-      description: 'We will visit your property, confirm the scope, and set a convenient date.'
+      title: 'We Come to You',
+      description: 'We visit, confirm the work, and schedule at your convenience.'
     },
     {
       id: 'step-3',
       number: '03',
-      title: 'We Remove & Clean',
-      description: 'Our team removes hydrilla by hand, bags it, and leaves your shoreline pristine.'
+      title: 'Your Water, Restored',
+      description: 'We remove every strand by hand and leave your shoreline cleaner than we found it.'
     }
   ];
 
@@ -38,7 +38,7 @@ export default function HowItWorksSection({ stepMedia, onMediaChange, isAdmin })
             How It Works
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            A simple, straightforward process from start to finish
+            Three simple steps to crystal-clear water
           </p>
         </motion.div>
 
