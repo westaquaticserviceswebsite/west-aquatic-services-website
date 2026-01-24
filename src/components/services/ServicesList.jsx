@@ -49,17 +49,7 @@ export default function ServicesList() {
   return (
     <section className="py-16 md:py-24 px-5 md:px-8 bg-white">
       <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <h2 className="text-2xl md:text-4xl font-semibold text-slate-800">
-            What We Offer
-          </h2>
-        </motion.div>
+
 
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, i) => (
