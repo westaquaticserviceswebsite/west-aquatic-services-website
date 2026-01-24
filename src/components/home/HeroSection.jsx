@@ -7,7 +7,21 @@ import { motion } from 'framer-motion';
 
 export default function HeroSection({ heroMedia }) {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-sky-50 via-white to-emerald-50">
+    <section className="relative min-h-[90vh] flex items-center">
+      {/* Background with overlay */}
+      <div className="absolute inset-0 z-0">
+        {heroMedia ? (
+          <img 
+            src={heroMedia} 
+            alt="Lake Austin shoreline" 
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-sky-100 via-white to-emerald-50" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/40" />
+      </div>
+
       <div className="relative z-10 w-full px-5 md:px-8 py-12 md:py-20">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1 
