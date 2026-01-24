@@ -21,7 +21,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-600 leading-tight tracking-tight"
           >
-            Swim Again. This Week.
+            Clear Dock Access. Restored.
           </motion.h1>
 
           <motion.p 
@@ -30,7 +30,8 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-8 text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl mx-auto"
           >
-            Manual removal. No chemicals. Clear water.
+            When hydrilla blocks your dock, everything stops.<br />
+            We remove it by hand so you can use your dock, protect your shoreline, and enjoy clear water again.
           </motion.p>
 
           <motion.div 

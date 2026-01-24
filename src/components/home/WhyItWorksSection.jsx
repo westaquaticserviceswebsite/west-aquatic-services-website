@@ -17,7 +17,8 @@ export default function WhyItWorksSection() {
           </h2>
           
           <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            Hydrilla blocks your dock. Ruins your view. Steals your time. We fix it.
+            Hydrilla makes docks unusable and water frustrating.<br />
+            Our work restores access and clarity without disturbing your shoreline.
           </p>
         </motion.div>
 
@@ -29,10 +30,10 @@ export default function WhyItWorksSection() {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { icon: Waves, label: 'Clear Water' },
-            { icon: Anchor, label: 'Dock Access' },
-            { icon: Eye, label: 'Better Views' },
-            { icon: Clock, label: 'More Time on Water' }
+            { icon: Anchor, label: 'Clear Dock Access' },
+            { icon: Waves, label: 'Usable Water Around Your Dock' },
+            { icon: Eye, label: 'Open Views' },
+            { icon: Clock, label: 'More Time on the Lake' }
           ].map((item, i) => (
             <div 
               key={i} 
