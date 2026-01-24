@@ -27,7 +27,7 @@ export default function ServicesList() {
     {
       icon: Volume2,
       title: 'No Heavy Machinery',
-      description: 'Quiet, careful work that won't disturb your property or peace'
+      description: 'Quiet, careful work that will not disturb your property or peace'
     },
     {
       icon: Package,
