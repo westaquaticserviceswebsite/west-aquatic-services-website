@@ -1,70 +1,80 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
 
 export default function Contact() {
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-emerald-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <section className="pt-24 pb-12 md:pt-32 md:pb-16 px-5 md:px-8">
-        <div className="max-w-2xl mx-auto text-center">
+      <section className="pt-32 pb-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="text-center mb-16"
           >
-            <h1 className="text-3xl md:text-5xl font-semibold text-slate-800">
-              Contact Us
+            <h1 className="text-4xl md:text-6xl font-semibold text-slate-900 mb-6">
+              Get In Touch
             </h1>
-            <p className="mt-4 text-lg text-slate-600">
-              Have questions? Feel free to reach out! Our team will respond within 24 hours.
+            <p className="text-xl text-slate-600">
+              We're here to help with your waterfront needs
             </p>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Content */}
-      <section className="pb-20 px-5 md:px-8">
-        <div className="max-w-2xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-10 space-y-8"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
           >
-            {/* Service Area */}
-            <div className="flex items-start gap-4">
-              <div className="p-3 rounded-xl bg-sky-100 flex-shrink-0">
-                <MapPin className="w-6 h-6 text-sky-600" />
+            {/* Email */}
+            <a 
+              href="mailto:Henry.West@du.edu"
+              className="block group"
+            >
+              <div className="bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-sky-400 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="p-4 rounded-xl bg-sky-50 group-hover:bg-sky-100 transition-colors">
+                    <Mail className="w-6 h-6 text-sky-600" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-slate-500 mb-1">Email</p>
+                    <p className="text-xl font-semibold text-slate-900">Henry.West@du.edu</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p className="font-semibold text-slate-800 text-lg">Service Area</p>
-                <p className="text-slate-600 mt-1">Lake Austin, Texas</p>
-              </div>
-            </div>
+            </a>
 
-            {/* Email Button */}
-            <div className="pt-4 space-y-16">
-              <a href="mailto:Henry.West@du.edu">
-                <Button 
-                  className="w-full h-16 bg-sky-600 hover:bg-sky-700 text-white text-lg rounded-full shadow-lg shadow-sky-200 transition-all flex items-center justify-center gap-3"
-                >
-                  <Mail className="w-5 h-5" />
-                  Email Us
-                </Button>
-              </a>
-              <a href="tel:+17372319001">
-                <Button 
-                  className="w-full h-16 bg-emerald-600 hover:bg-emerald-700 text-white text-lg rounded-full shadow-lg shadow-emerald-200 transition-all flex items-center justify-center gap-3"
-                >
-                  <Phone className="w-5 h-5" />
-                  Call Us
-                </Button>
-              </a>
-            </div>
+            {/* Phone */}
+            <a 
+              href="tel:+17372319001"
+              className="block group"
+            >
+              <div className="bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-emerald-400 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="p-4 rounded-xl bg-emerald-50 group-hover:bg-emerald-100 transition-colors">
+                    <Phone className="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-slate-500 mb-1">Phone</p>
+                    <p className="text-xl font-semibold text-slate-900">(737) 231-9001</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-12 text-center"
+          >
+            <p className="text-slate-500">
+              Serving Lake Austin, Texas
+            </p>
           </motion.div>
         </div>
       </section>
