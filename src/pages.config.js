@@ -1,15 +1,15 @@
-import Contact from './pages/Contact';
-import Home from './pages/Home';
 import RequestQuote from './pages/RequestQuote';
+import Contact from './pages/Contact';
 import Services from './pages/Services';
+import Home from './pages/Home';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
-    "Contact": Contact,
-    "Home": Home,
     "RequestQuote": RequestQuote,
+    "Contact": Contact,
     "Services": Services,
+    "Home": Home,
 }
 
 export const pagesConfig = {

@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Shield, Leaf, Hand } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import MediaUploader from '@/components/ui/MediaUploader';
 import { motion } from 'framer-motion';
 
-export default function HeroSection({ heroMedia }) {
+export default function HeroSection({ heroMedia, onMediaChange, isAdmin }) {
   return (
     <section className="relative min-h-[90vh] flex items-center">
       {/* Background with overlay */}
@@ -21,6 +22,8 @@ export default function HeroSection({ heroMedia }) {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/40" />
       </div>
+
+
 
       <div className="relative z-10 w-full px-5 md:px-8 py-12 md:py-20">
         <div className="max-w-3xl mx-auto text-center">

@@ -1,7 +1,9 @@
 import React from 'react';
+import MediaUploader from '@/components/ui/MediaUploader';
 import { motion } from 'framer-motion';
+import { Play } from 'lucide-react';
 
-export default function VideoSection({ videoMedia, caption }) {
+export default function VideoSection({ videoMedia, caption, onMediaChange, isAdmin }) {
   return (
     <section className="py-16 md:py-24 px-5 md:px-8 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-4xl mx-auto">
@@ -22,10 +24,13 @@ export default function VideoSection({ videoMedia, caption }) {
           className="relative"
         >
           <div className="rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 bg-slate-100">
-            <img 
-              src={videoMedia} 
-              alt="Our services" 
-              className="w-full h-auto object-cover"
+            <MediaUploader
+              sectionId="services-video"
+              currentMedia={videoMedia}
+              onMediaChange={onMediaChange}
+              isAdmin={isAdmin}
+              mediaType="video"
+              aspectRatio="video"
             />
           </div>
           
