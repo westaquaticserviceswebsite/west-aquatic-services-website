@@ -29,7 +29,7 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Email Card */}
             <motion.a
-              href="mailto:info@westaquaticservices.com"
+              href="Henry.West@du.edu"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -40,7 +40,7 @@ export default function Contact() {
                   <Mail className="w-8 h-8 text-sky-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Email</h3>
-                <p className="text-slate-600">info@westaquaticservices.com</p>
+                <p className="text-slate-600">Henry.West@du.edu</p>
               </div>
             </motion.a>
 
