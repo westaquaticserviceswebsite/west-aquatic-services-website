@@ -16,9 +16,12 @@ export default function RequestQuote() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-3xl md:text-5xl font-semibold text-slate-800">
-              Your Quote. 24 Hours. Zero Hassle.
+            <h1 className="text-4xl md:text-6xl font-bold text-sky-600 leading-tight">
+              Clear Water Starts Here
             </h1>
+            <p className="mt-4 text-xl md:text-2xl text-slate-700">
+              Free quote in 24 hours
+            </p>
           </motion.div>
         </div>
       </section>
@@ -31,22 +34,42 @@ export default function RequestQuote() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="max-w-2xl mx-auto text-center"
         >
-          <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-10">
-            <p className="text-slate-600 mb-8 text-lg">
-              Tell us about your property. Get your quote in 24 hours. Simple.
-            </p>
-            <a 
-              href="https://www.surveymonkey.com/r/FPMJF9H" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button 
-                className="h-16 bg-sky-600 hover:bg-sky-700 text-white text-lg rounded-full shadow-lg shadow-sky-200 transition-all px-10 flex items-center justify-center gap-3 mx-auto"
+          <div className="bg-gradient-to-br from-white to-sky-50/30 rounded-3xl shadow-2xl shadow-sky-200/30 p-12 border border-sky-100">
+            <div className="max-w-md mx-auto space-y-8">
+              <div className="text-center space-y-2">
+                <p className="text-slate-700 text-xl font-medium">
+                  Tell us about your property
+                </p>
+                <p className="text-slate-500">
+                  Quick form. Fast response. Clear pricing.
+                </p>
+              </div>
+              
+              <a 
+                href="https://www.surveymonkey.com/r/FPMJF9H" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
               >
-                Get My Free Quote
-                <ExternalLink className="w-5 h-5" />
-              </Button>
-            </a>
+                <Button 
+                  className="w-full h-20 bg-gradient-to-r from-sky-600 to-emerald-500 hover:from-sky-700 hover:to-emerald-600 text-white text-xl font-semibold rounded-2xl shadow-xl shadow-sky-300/40 transition-all hover:shadow-2xl hover:shadow-sky-400/50 hover:scale-[1.02] flex items-center justify-center gap-3"
+                >
+                  Get My Free Quote
+                  <ExternalLink className="w-6 h-6" />
+                </Button>
+              </a>
+              
+              <div className="flex items-center justify-center gap-6 text-sm text-slate-600 pt-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                  <span>No commitment</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                  <span>24 hour response</span>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </section>
