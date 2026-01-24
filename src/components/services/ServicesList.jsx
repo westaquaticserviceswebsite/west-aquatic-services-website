@@ -59,9 +59,6 @@ export default function ServicesList() {
           <h2 className="text-2xl md:text-4xl font-semibold text-slate-800">
             What We Offer
           </h2>
-          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-            Comprehensive manual hydrilla removal services tailored to Lake Austin properties
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
