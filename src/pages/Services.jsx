@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { base44 } from '@/api/base44Client';
-import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
@@ -11,39 +9,6 @@ import ServicesList from '@/components/services/ServicesList';
 import Footer from '@/components/Footer';
 
 export default function Services() {
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [mediaState, setMediaState] = useState({});
-
-  useEffect(() => {
-    const checkAdmin = async () => {
-      try {
-        const user = await base44.auth.me();
-        setIsAdmin(user?.role === 'admin');
-      } catch {
-        setIsAdmin(false);
-      }
-    };
-    checkAdmin();
-  }, []);
-
-  const { data: allMedia = [] } = useQuery({
-    queryKey: ['siteMedia'],
-    queryFn: () => base44.entities.SiteMedia.list()
-  });
-
-  useEffect(() => {
-    if (allMedia.length > 0) {
-      const mediaMap = {};
-      allMedia.forEach(m => {
-        mediaMap[m.section_id] = m.media_url;
-      });
-      setMediaState(mediaMap);
-    }
-  }, [allMedia]);
-
-  const handleMediaChange = (sectionId, url) => {
-    setMediaState(prev => ({ ...prev, [sectionId]: url }));
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -65,11 +30,7 @@ export default function Services() {
         </div>
       </section>
 
-      <VideoSection 
-        videoMedia={mediaState['services-video']}
-        onMediaChange={(url) => handleMediaChange('services-video', url)}
-        isAdmin={isAdmin}
-      />
+      <VideoSection videoMedia="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1200" />
 
       <ServicesList />
 
