@@ -16,7 +16,7 @@ export default function StorySection() {
             Our Approach
           </div>
           <p className="text-2xl md:text-3xl text-slate-700 leading-relaxed">
-            Your lake access matters. We remove hydrilla by hand—no shortcuts, no chemicals—so you can enjoy the water you love.
+            We remove hydrilla by hand. No shortcuts. No chemicals. Just results.
           </p>
           <div className="pt-6">
             <p className="text-slate-500">

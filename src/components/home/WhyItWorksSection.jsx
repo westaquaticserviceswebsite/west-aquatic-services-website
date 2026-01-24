@@ -17,7 +17,7 @@ export default function WhyItWorksSection() {
           </h2>
           
           <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            Hydrilla steals your dock access, blocks your view, and costs you days on the water. We give it all back—without chemicals, noise, or damage.
+            Hydrilla blocks your dock. Ruins your view. Steals your time. We fix it.
           </p>
         </motion.div>
 

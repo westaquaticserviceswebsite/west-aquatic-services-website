@@ -26,7 +26,7 @@ export default function FinalCTASection() {
           </h2>
           
           <p className="mt-6 text-lg text-white/90 max-w-xl mx-auto">
-            Stop fighting hydrilla. Get back to the water you love—fast, safe, and done right.
+            Stop fighting hydrilla. Get back to the water.
           </p>
           
           <div className="mt-10">

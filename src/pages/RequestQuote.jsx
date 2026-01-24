@@ -33,7 +33,7 @@ export default function RequestQuote() {
         >
           <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-10">
             <p className="text-slate-600 mb-8 text-lg">
-              Tell us about your property. We'll send a clear, honest quote within 24 hours. No surprises, no pressure.
+              Tell us about your property. Get your quote in 24 hours. Simple.
             </p>
             <a 
               href="https://www.surveymonkey.com/r/FPMJF9H" 

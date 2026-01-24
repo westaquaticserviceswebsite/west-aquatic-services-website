@@ -19,7 +19,7 @@ export default function Contact() {
               Let's Talk About Your Lake
             </h1>
             <p className="text-xl text-slate-600">
-              Questions? Ready to start? We're here to help.
+              Questions? Ready to start? We're here.
             </p>
           </motion.div>
 

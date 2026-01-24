@@ -7,42 +7,42 @@ export default function ServicesList() {
     {
       icon: Hand,
       title: 'Manual Hydrilla Removal',
-      description: 'Every strand removed by hand—precise, thorough, and effective'
+      description: 'Every strand removed by hand. Precise and thorough.'
     },
     {
       icon: Anchor,
       title: 'Dock & Shoreline Clearing',
-      description: 'Full access restored to your dock, boat lift, and waterfront'
+      description: 'Full access restored. Dock, boat lift, waterfront.'
     },
     {
       icon: Fish,
       title: 'Swim Area Restoration',
-      description: 'Safe, clear water where your family can swim with confidence'
+      description: 'Safe, clear water. Swim with confidence.'
     },
     {
       icon: Droplets,
       title: 'Zero Chemicals',
-      description: 'Completely natural—safe for the lake, wildlife, and your family'
+      description: 'Completely natural. Safe for lake and wildlife.'
     },
     {
       icon: Volume2,
       title: 'No Heavy Machinery',
-      description: 'Quiet, careful work that will not disturb your property or peace'
+      description: 'Quiet work. No disturbance to your property.'
     },
     {
       icon: Package,
       title: 'Complete Cleanup',
-      description: 'We collect, bag, and dispose of everything—nothing left behind'
+      description: 'We collect, bag, and dispose. Nothing left behind.'
     },
     {
       icon: FileCheck,
       title: 'Fully Permitted',
-      description: 'Every job meets local regulations and environmental standards'
+      description: 'Meets all local and environmental standards.'
     },
     {
       icon: Calculator,
       title: 'Transparent Pricing',
-      description: 'Simple square-footage pricing—no hidden fees, no surprises'
+      description: 'Simple pricing by square footage. No surprises.'
     }
   ];
 

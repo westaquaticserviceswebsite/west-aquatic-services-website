@@ -30,7 +30,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-8 text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl mx-auto"
           >
-            Safe, manual hydrilla removal that restores dock access without chemicals or heavy machinery
+            Manual removal. No chemicals. Clear water.
           </motion.p>
 
           <motion.div 

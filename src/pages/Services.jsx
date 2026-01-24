@@ -40,7 +40,7 @@ export default function Services() {
               Ready to Take Back Your Waterfront?
             </h2>
             <p className="mt-4 text-slate-600 text-lg">
-              Get your free quote today. See your property transformed tomorrow.
+              Get your free quote today. Clear water tomorrow.
             </p>
             <div className="mt-8">
               <Link to={createPageUrl('RequestQuote')}>
