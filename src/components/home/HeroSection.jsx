@@ -21,7 +21,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-sky-600 leading-tight tracking-tight"
           >
-            Your Dock. Cleared in Days.
+            Swim Again. This Week.
           </motion.h1>
 
           <motion.p 
