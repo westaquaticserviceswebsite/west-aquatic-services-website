@@ -47,23 +47,8 @@ export default function ServicesList() {
   ];
 
   return (
-    <section className="py-12 md:py-16 px-5 md:px-8 bg-gradient-to-b from-white to-sky-50/30">
+    <section className="pb-16 md:pb-20 px-5 md:px-8 bg-gradient-to-b from-white to-sky-50/30">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <h2 className="text-2xl md:text-4xl font-semibold text-slate-800">
-            What We Offer
-          </h2>
-          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-            Comprehensive manual hydrilla removal services tailored to Lake Austin properties
-          </p>
-        </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <motion.div
