@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { base44 } from '@/api/base44Client';
-import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 import HeroSection from '@/components/home/HeroSection';
 import StorySection from '@/components/home/StorySection';
 import WhyItWorksSection from '@/components/home/WhyItWorksSection';
@@ -9,61 +7,15 @@ import FinalCTASection from '@/components/home/FinalCTASection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [mediaState, setMediaState] = useState({});
-
-  useEffect(() => {
-    const checkAdmin = async () => {
-      try {
-        const user = await base44.auth.me();
-        setIsAdmin(user?.role === 'admin');
-      } catch {
-        setIsAdmin(false);
-      }
-    };
-    checkAdmin();
-  }, []);
-
-  const { data: allMedia = [] } = useQuery({
-    queryKey: ['siteMedia'],
-    queryFn: () => base44.entities.SiteMedia.list()
-  });
-
-  useEffect(() => {
-    if (allMedia.length > 0) {
-      const mediaMap = {};
-      allMedia.forEach(m => {
-        mediaMap[m.section_id] = m.media_url;
-      });
-      setMediaState(mediaMap);
-    }
-  }, [allMedia]);
-
-  const handleMediaChange = (sectionId, url) => {
-    setMediaState(prev => ({ ...prev, [sectionId]: url }));
-  };
-
   return (
     <div className="min-h-screen bg-white">
-      <HeroSection 
-        heroMedia={mediaState['hero']}
-        onMediaChange={(url) => handleMediaChange('hero', url)}
-        isAdmin={isAdmin}
-      />
+      <HeroSection heroMedia="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600" />
       
-      <StorySection 
-        storyMedia={mediaState['story']}
-        onMediaChange={(url) => handleMediaChange('story', url)}
-        isAdmin={isAdmin}
-      />
+      <StorySection storyMedia="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800" />
       
       <WhyItWorksSection />
       
-      <HowItWorksSection 
-        stepMedia={mediaState}
-        onMediaChange={handleMediaChange}
-        isAdmin={isAdmin}
-      />
+      <HowItWorksSection />
       
       <FinalCTASection />
       

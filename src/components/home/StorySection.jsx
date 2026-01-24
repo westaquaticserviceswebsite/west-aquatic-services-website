@@ -1,8 +1,7 @@
 import React from 'react';
-import MediaUploader from '@/components/ui/MediaUploader';
 import { motion } from 'framer-motion';
 
-export default function StorySection({ storyMedia, onMediaChange, isAdmin }) {
+export default function StorySection({ storyMedia }) {
   return (
     <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-5 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -13,14 +12,13 @@ export default function StorySection({ storyMedia, onMediaChange, isAdmin }) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <MediaUploader
-              sectionId="story"
-              currentMedia={storyMedia}
-              onMediaChange={onMediaChange}
-              isAdmin={isAdmin}
-              aspectRatio="square"
-              className="rounded-3xl overflow-hidden shadow-xl"
-            />
+            <div className="rounded-3xl overflow-hidden shadow-xl">
+              <img 
+                src={storyMedia} 
+                alt="Lake Austin" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
           
           <motion.div
