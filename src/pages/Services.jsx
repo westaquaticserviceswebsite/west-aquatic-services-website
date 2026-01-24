@@ -1,13 +1,50 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { base44 } from '@/api/base44Client';
+import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import VideoSection from '@/components/services/VideoSection';
 import ServicesList from '@/components/services/ServicesList';
 import Footer from '@/components/Footer';
 
 export default function Services() {
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [mediaState, setMediaState] = useState({});
+
+  useEffect(() => {
+    const checkAdmin = async () => {
+      try {
+        const user = await base44.auth.me();
+        setIsAdmin(user?.role === 'admin');
+      } catch {
+        setIsAdmin(false);
+      }
+    };
+    checkAdmin();
+  }, []);
+
+  const { data: allMedia = [] } = useQuery({
+    queryKey: ['siteMedia'],
+    queryFn: () => base44.entities.SiteMedia.list()
+  });
+
+  useEffect(() => {
+    if (allMedia.length > 0) {
+      const mediaMap = {};
+      allMedia.forEach(m => {
+        mediaMap[m.section_id] = m.media_url;
+      });
+      setMediaState(mediaMap);
+    }
+  }, [allMedia]);
+
+  const handleMediaChange = (sectionId, url) => {
+    setMediaState(prev => ({ ...prev, [sectionId]: url }));
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -22,11 +59,17 @@ export default function Services() {
               Our Services
             </h1>
             <p className="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              Focused manual hydrilla removal with care for your property and the lake. No chemicals, no heavy machinery—just careful, professional work.
+              Focused manual hydrilla removal with care for your property and the lake. No chemicals, no heavy machinery just careful, professional work.
             </p>
           </motion.div>
         </div>
       </section>
+
+      <VideoSection 
+        videoMedia={mediaState['services-video']}
+        onMediaChange={(url) => handleMediaChange('services-video', url)}
+        isAdmin={isAdmin}
+      />
 
       <ServicesList />
 

@@ -1,7 +1,114 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import { base44 } from '@/api/base44Client';
 import { Waves } from 'lucide-react';
+import { useQuery } from '@tanstack/react-query';
+
+function FooterLogoUploader() {
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const fileInputRef = React.useRef(null);
+
+  useEffect(() => {
+    const checkAdmin = async () => {
+      try {
+        const user = await base44.auth.me();
+        setIsAdmin(user?.role === 'admin');
+      } catch {
+        setIsAdmin(false);
+      }
+    };
+    checkAdmin();
+  }, []);
+
+  const { data: logoMedia, refetch } = useQuery({
+    queryKey: ['footer-logo'],
+    queryFn: async () => {
+      const media = await base44.entities.SiteMedia.filter({ section_id: 'footer-logo' });
+      return media[0]?.media_url || null;
+    }
+  });
+
+  const handleFileChange = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    try {
+      const { file_url } = await base44.integrations.Core.UploadFile({ file });
+      const existingMedia = await base44.entities.SiteMedia.filter({ section_id: 'footer-logo' });
+      
+      if (existingMedia.length > 0) {
+        await base44.entities.SiteMedia.update(existingMedia[0].id, {
+          media_url: file_url
+        });
+      } else {
+        await base44.entities.SiteMedia.create({
+          section_id: 'footer-logo',
+          media_url: file_url,
+          media_type: 'image'
+        });
+      }
+      refetch();
+    } catch (error) {
+      console.error('Upload failed:', error);
+    }
+  };
+
+  if (!logoMedia) {
+    if (isAdmin) {
+      return (
+        <div>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handleFileChange}
+            className="hidden"
+          />
+          <button
+            onClick={() => fileInputRef.current?.click()}
+            className="p-2 rounded-xl bg-sky-500/20 hover:bg-sky-500/30 transition-colors"
+          >
+            <Waves className="w-6 h-6 text-sky-400" />
+          </button>
+        </div>
+      );
+    }
+    return (
+      <div className="p-2 rounded-xl bg-sky-500/20">
+        <Waves className="w-6 h-6 text-sky-400" />
+      </div>
+    );
+  }
+
+  return (
+    <div 
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/*"
+        onChange={handleFileChange}
+        className="hidden"
+      />
+      <img 
+        src={logoMedia} 
+        alt="West Aquatic Services" 
+        className="h-10 w-auto max-w-[120px] object-contain cursor-pointer"
+        onClick={() => isAdmin && fileInputRef.current?.click()}
+      />
+      {isAdmin && isHovered && (
+        <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center">
+          <span className="text-white text-xs">Edit</span>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Footer() {
   const navigation = [
@@ -18,9 +125,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="max-w-sm">
             <div className="flex items-center gap-3">
-              <div className="p-2 rounded-xl bg-sky-500/20">
-                <Waves className="w-6 h-6 text-sky-400" />
-              </div>
+              <FooterLogoUploader />
               <span className="text-xl font-semibold">West Aquatic Services</span>
             </div>
             <p className="mt-4 text-slate-400 leading-relaxed">

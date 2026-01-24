@@ -1,9 +1,117 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import { base44 } from '@/api/base44Client';
 import { Waves, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useQuery } from '@tanstack/react-query';
+
+function LogoUploader({ isScrolled }) {
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const fileInputRef = React.useRef(null);
+
+  useEffect(() => {
+    const checkAdmin = async () => {
+      try {
+        const user = await base44.auth.me();
+        setIsAdmin(user?.role === 'admin');
+      } catch {
+        setIsAdmin(false);
+      }
+    };
+    checkAdmin();
+  }, []);
+
+  const { data: logoMedia, refetch } = useQuery({
+    queryKey: ['logo'],
+    queryFn: async () => {
+      const media = await base44.entities.SiteMedia.filter({ section_id: 'nav-logo' });
+      return media[0]?.media_url || null;
+    }
+  });
+
+  const handleFileChange = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    try {
+      const { file_url } = await base44.integrations.Core.UploadFile({ file });
+      const existingMedia = await base44.entities.SiteMedia.filter({ section_id: 'nav-logo' });
+      
+      if (existingMedia.length > 0) {
+        await base44.entities.SiteMedia.update(existingMedia[0].id, {
+          media_url: file_url
+        });
+      } else {
+        await base44.entities.SiteMedia.create({
+          section_id: 'nav-logo',
+          media_url: file_url,
+          media_type: 'image'
+        });
+      }
+      refetch();
+    } catch (error) {
+      console.error('Upload failed:', error);
+    }
+  };
+
+  if (!logoMedia) {
+    if (isAdmin) {
+      return (
+        <div>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handleFileChange}
+            className="hidden"
+          />
+          <button
+            onClick={() => fileInputRef.current?.click()}
+            className={`p-2 rounded-xl transition-colors ${isScrolled ? 'bg-sky-100' : 'bg-white/90'} hover:bg-sky-200`}
+          >
+            <Waves className="w-5 h-5 text-sky-600" />
+          </button>
+        </div>
+      );
+    }
+    return (
+      <div className={`p-2 rounded-xl transition-colors ${isScrolled ? 'bg-sky-100' : 'bg-white/90'}`}>
+        <Waves className="w-5 h-5 text-sky-600" />
+      </div>
+    );
+  }
+
+  return (
+    <div 
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/*"
+        onChange={handleFileChange}
+        className="hidden"
+      />
+      <img 
+        src={logoMedia} 
+        alt="West Aquatic Services" 
+        className="h-10 w-auto max-w-[120px] object-contain"
+        onClick={() => isAdmin && fileInputRef.current?.click()}
+        style={{ cursor: isAdmin ? 'pointer' : 'default' }}
+      />
+      {isAdmin && isHovered && (
+        <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center">
+          <span className="text-white text-xs">Edit</span>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Layout({ children }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -72,14 +180,12 @@ export default function Layout({ children }) {
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to={createPageUrl('Home')} className="flex items-center gap-3">
-              <div className={`p-2 rounded-xl transition-colors ${isScrolled ? 'bg-sky-100' : 'bg-white/90'}`}>
-                <Waves className="w-5 h-5 text-sky-600" />
-              </div>
+            <div className="flex items-center gap-3">
+              <LogoUploader isScrolled={isScrolled} />
               <span className={`text-lg font-semibold transition-colors ${isScrolled ? 'text-slate-800' : 'text-slate-800'}`}>
                 West Aquatic Services
               </span>
-            </Link>
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
