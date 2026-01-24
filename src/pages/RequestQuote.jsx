@@ -58,17 +58,6 @@ export default function RequestQuote() {
                   <ExternalLink className="w-6 h-6" />
                 </Button>
               </a>
-              
-              <div className="flex items-center justify-center gap-6 text-sm text-slate-600 pt-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-                  <span>No commitment</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-                  <span>24 hour response</span>
-                </div>
-              </div>
             </div>
           </div>
         </motion.div>
