@@ -9,61 +9,69 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-emerald-50">
       {/* Header */}
-      <section className="pt-24 pb-12 md:pt-32 md:pb-16 px-5 md:px-8">
-        <div className="max-w-2xl mx-auto text-center">
+      <section className="pt-32 pb-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="text-center mb-16"
           >
-            <h1 className="text-3xl md:text-5xl font-semibold text-slate-800">
-              Contact Us
+            <h1 className="text-4xl md:text-5xl font-semibold text-slate-800 mb-6">
+              Get In Touch
             </h1>
-            <p className="mt-4 text-lg text-slate-600">
-              Have questions? Feel free to reach out! Our team will respond within 24 hours.
+            <p className="text-xl text-slate-600">
+              We'll respond within 24 hours
             </p>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Content */}
-      <section className="pb-20 px-5 md:px-8">
-        <div className="max-w-2xl mx-auto">
+          {/* Contact Cards */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Email Card */}
+            <motion.a
+              href="mailto:info@westaquaticservices.com"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="group"
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-slate-100 h-full flex flex-col items-center justify-center text-center hover:border-sky-200">
+                <div className="p-4 rounded-full bg-sky-100 group-hover:bg-sky-200 transition-colors mb-4">
+                  <Mail className="w-8 h-8 text-sky-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Email</h3>
+                <p className="text-slate-600">info@westaquaticservices.com</p>
+              </div>
+            </motion.a>
+
+            {/* Phone Card */}
+            <motion.a
+              href="tel:+17372319001"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="group"
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-slate-100 h-full flex flex-col items-center justify-center text-center hover:border-emerald-200">
+                <div className="p-4 rounded-full bg-emerald-100 group-hover:bg-emerald-200 transition-colors mb-4">
+                  <Phone className="w-8 h-8 text-emerald-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Call</h3>
+                <p className="text-slate-600">(737) 231-9001</p>
+              </div>
+            </motion.a>
+          </div>
+
+          {/* Service Area */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-10 space-y-8"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-12 text-center"
           >
-            {/* Service Area */}
-            <div className="flex items-start gap-4">
-              <div className="p-3 rounded-xl bg-sky-100 flex-shrink-0">
-                <MapPin className="w-6 h-6 text-sky-600" />
-              </div>
-              <div>
-                <p className="font-semibold text-slate-800 text-lg">Service Area</p>
-                <p className="text-slate-600 mt-1">Lake Austin, Texas</p>
-              </div>
-            </div>
-
-            {/* Email Button */}
-            <div className="pt-4 space-y-16">
-              <a href="mailto:Henry.West@du.edu">
-                <Button 
-                  className="w-full h-16 bg-sky-600 hover:bg-sky-700 text-white text-lg rounded-full shadow-lg shadow-sky-200 transition-all flex items-center justify-center gap-3"
-                >
-                  <Mail className="w-5 h-5" />
-                  Email Us
-                </Button>
-              </a>
-              <a href="tel:+17372319001">
-                <Button 
-                  className="w-full h-16 bg-emerald-600 hover:bg-emerald-700 text-white text-lg rounded-full shadow-lg shadow-emerald-200 transition-all flex items-center justify-center gap-3"
-                >
-                  <Phone className="w-5 h-5" />
-                  Call Us
-                </Button>
-              </a>
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-50 border border-slate-200">
+              <MapPin className="w-5 h-5 text-slate-600" />
+              <span className="text-slate-700 font-medium">Serving Lake Austin, Texas</span>
             </div>
           </motion.div>
         </div>
