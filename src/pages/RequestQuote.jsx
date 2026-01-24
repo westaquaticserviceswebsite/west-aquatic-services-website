@@ -54,7 +54,7 @@ export default function RequestQuote() {
                 <Button 
                   className="w-full h-20 bg-gradient-to-r from-sky-600 to-emerald-500 hover:from-sky-700 hover:to-emerald-600 text-white text-xl font-semibold rounded-2xl shadow-xl shadow-sky-300/40 transition-all hover:shadow-2xl hover:shadow-sky-400/50 hover:scale-[1.02] flex items-center justify-center gap-3"
                 >
-                  Get My Free Quote
+                  Get a Quote
                   <ExternalLink className="w-6 h-6" />
                 </Button>
               </a>
