@@ -47,8 +47,8 @@ export default function ServicesList() {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-5 md:px-8 bg-white">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-12 md:py-16 px-5 md:px-8 bg-gradient-to-b from-white to-sky-50/30">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ export default function ServicesList() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -72,16 +72,16 @@ export default function ServicesList() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="flex gap-5 p-6 rounded-2xl bg-slate-50 hover:bg-sky-50 transition-colors group"
+              className="flex flex-col gap-4 p-7 rounded-2xl bg-white shadow-md border border-slate-100 hover:shadow-xl hover:border-sky-200 transition-all group"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center group-hover:bg-sky-100 transition-colors">
-                <service.icon className="w-6 h-6 text-sky-600" />
+              <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-sky-100 to-emerald-100 flex items-center justify-center group-hover:from-sky-200 group-hover:to-emerald-200 transition-all">
+                <service.icon className="w-7 h-7 text-sky-600" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-slate-800">
+                <h3 className="text-lg font-semibold text-slate-800 mb-2">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-slate-600">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>
