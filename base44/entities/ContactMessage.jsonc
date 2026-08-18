@@ -1,0 +1,36 @@
+{
+  "name": "ContactMessage",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Full name of sender"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "message": {
+      "type": "string",
+      "description": "Message content"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "read",
+        "replied"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "message"
+  ]
+}

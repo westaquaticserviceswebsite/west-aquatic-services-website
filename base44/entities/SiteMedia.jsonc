@@ -1,0 +1,35 @@
+{
+  "name": "SiteMedia",
+  "type": "object",
+  "properties": {
+    "section_id": {
+      "type": "string",
+      "description": "Unique identifier for the section (e.g., hero, story, service-1)"
+    },
+    "media_url": {
+      "type": "string",
+      "description": "URL of the uploaded media"
+    },
+    "media_type": {
+      "type": "string",
+      "enum": [
+        "image",
+        "video"
+      ],
+      "default": "image"
+    },
+    "caption": {
+      "type": "string",
+      "description": "Optional caption for the media"
+    },
+    "alt_text": {
+      "type": "string",
+      "description": "Alt text for accessibility"
+    }
+  },
+  "required": [
+    "section_id",
+    "media_url",
+    "media_type"
+  ]
+}

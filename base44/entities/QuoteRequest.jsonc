@@ -1,0 +1,57 @@
+{
+  "name": "QuoteRequest",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Full name of the requester"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "property_address": {
+      "type": "string",
+      "description": "Property address"
+    },
+    "area_type": {
+      "type": "string",
+      "enum": [
+        "dock",
+        "shoreline",
+        "swim_area",
+        "other"
+      ],
+      "description": "Type of area to be serviced"
+    },
+    "estimated_sqft": {
+      "type": "string",
+      "description": "Estimated square footage"
+    },
+    "additional_details": {
+      "type": "string",
+      "description": "Additional details or notes"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "quoted",
+        "scheduled",
+        "completed"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "phone",
+    "property_address"
+  ]
+}
